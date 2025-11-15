@@ -9,7 +9,6 @@ using VisualStudioDiscordRPC.Shared.Plugs.TextPlugs;
 using VisualStudioDiscordRPC.Shared.Plugs.TimerPlugs;
 using VisualStudioDiscordRPC.Shared.Nests;
 using VisualStudioDiscordRPC.Shared.Utils;
-using System.Windows.Input;
 using System.Windows.Forms;
 
 namespace VisualStudioDiscordRPC.Shared.ViewModels
@@ -327,12 +326,12 @@ namespace VisualStudioDiscordRPC.Shared.ViewModels
 
         private void SelectSecretFolder(object parameter)
         {
-            using (var folderDialog = new System.Windows.Forms.FolderBrowserDialog())
+            using (var folderDialog = new FolderBrowserDialog())
             {
                 folderDialog.Description = "Select folder to hide all solutions in it";
                 folderDialog.ShowNewFolderButton = false;
                 
-                if (folderDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if (folderDialog.ShowDialog() == DialogResult.OK)
                 {
                     string selectedPath = folderDialog.SelectedPath;
                     if (!string.IsNullOrEmpty(selectedPath))
