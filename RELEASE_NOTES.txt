@@ -1,6 +1,7 @@
 1.7.7
 - The ability to select an entire folder for secret solutions (by RXDCODX);
-- Czech translation fixes (by Zdendaki).
+- Czech translation fixes (by Zdendaki);
+- German transtaliton fixes (by alxhu).
 
 1.7.6
 - Support for Visual Studio 2026 (Insiders)
