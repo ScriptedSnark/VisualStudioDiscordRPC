@@ -1,5 +1,4 @@
 ﻿using EnvDTE;
-using System;
 using System.IO;
 using VisualStudioDiscordRPC.Shared.AssetMap.Interfaces;
 using VisualStudioDiscordRPC.Shared.AssetMap.Models.Assets;
