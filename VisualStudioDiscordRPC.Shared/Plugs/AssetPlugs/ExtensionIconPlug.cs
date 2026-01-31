@@ -1,4 +1,5 @@
 ﻿using EnvDTE;
+using System;
 using System.IO;
 using VisualStudioDiscordRPC.Shared.AssetMap.Interfaces;
 using VisualStudioDiscordRPC.Shared.AssetMap.Models.Assets;
@@ -49,7 +50,7 @@ namespace VisualStudioDiscordRPC.Shared.Plugs.AssetPlugs
                 return AssetInfo.Idle;
             }
 
-            string extension = Path.GetExtension(_document.Name);
+            string extension = Path.GetExtension(_document.Name).ToLowerInvariant();
             suitableAsset = _assetMap.GetAsset(asset => asset.Extensions.Contains(extension));
             
             if (suitableAsset == null)
